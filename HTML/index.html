@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>노벨버스 - 성남폴리텍</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="iphone">
+    <div class="dynamic-island"></div>
+    <div class="content">
+      <h1 class="station-title">📍 성남폴리텍 정류장</h1>
+
+      <div class="bus-card red" onclick="showDetails('100', '3', '45')">
+        <div class="bus-title">🚌 100번</div>
+        <div class="bus-info">
+          <span>도착까지 3분</span>
+          <span class="passenger-count">45명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card yellow" onclick="showDetails('110', '5', '42')">
+        <div class="bus-title">🚌 110번</div>
+        <div class="bus-info">
+          <span>도착까지 5분</span>
+          <span class="passenger-count">42명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card green" onclick="showDetails('120', '7', '39')">
+        <div class="bus-title">🚌 120번</div>
+        <div class="bus-info">
+          <span>도착까지 7분</span>
+          <span class="passenger-count">39명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card red" onclick="showDetails('130', '9', '36')">
+        <div class="bus-title">🚌 130번</div>
+        <div class="bus-info">
+          <span>도착까지 9분</span>
+          <span class="passenger-count">36명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card yellow" onclick="showDetails('140', '11', '33')">
+        <div class="bus-title">🚌 140번</div>
+        <div class="bus-info">
+          <span>도착까지 11분</span>
+          <span class="passenger-count">33명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card green" onclick="showDetails('150', '13', '30')">
+        <div class="bus-title">🚌 150번</div>
+        <div class="bus-info">
+          <span>도착까지 13분</span>
+          <span class="passenger-count">30명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card red" onclick="showDetails('160', '15', '27')">
+        <div class="bus-title">🚌 160번</div>
+        <div class="bus-info">
+          <span>도착까지 15분</span>
+          <span class="passenger-count">27명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card yellow" onclick="showDetails('170', '17', '24')">
+        <div class="bus-title">🚌 170번</div>
+        <div class="bus-info">
+          <span>도착까지 17분</span>
+          <span class="passenger-count">24명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card green" onclick="showDetails('180', '19', '21')">
+        <div class="bus-title">🚌 180번</div>
+        <div class="bus-info">
+          <span>도착까지 19분</span>
+          <span class="passenger-count">21명</span>
+        </div>
+      </div>
+    
+
+      <div class="bus-card red" onclick="showDetails('190', '21', '18')">
+        <div class="bus-title">🚌 190번</div>
+        <div class="bus-info">
+          <span>도착까지 21분</span>
+          <span class="passenger-count">18명</span>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="modal-bus-title"></h2>
+      <p><strong>도착 예정:</strong> <span id="modal-arrival"></span>분</p>
+      <p><strong>탑승 인원:</strong> <span id="modal-passengers"></span>명</p>
+      <button onclick="closeModal()">닫기</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
