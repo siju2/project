@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>자리 배치도</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 30px auto;
+    }
+    th {
+      font-size: 24px;
+      padding: 10px;
+    }
+    td {
+      border: 1px solid #000;
+      padding: 10px 20px;
+      text-align: center;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+
+<table id="seatTable">
+  <tr><th colspan="6">자리 배치도</th></tr>
+</table>
+
+<script>
+  const total = 34;    // 총 좌석 수
+  const perRow = 6;    // 한 줄당 좌석 수
+  const table = document.getElementById("seatTable");
+
+  let seatNumber = 1;
+
+  for (let i = 0; i < Math.ceil(total / perRow); i++) {
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < perRow; j++) {
+      const cell = document.createElement("td");
+      if (seatNumber <= total) {
+        cell.textContent = "좌석 " + seatNumber;
+        seatNumber++;
+      } else {
+        cell.textContent = ""; // 빈 칸
+      }
+      row.appendChild(cell);
+    }
+
+    table.appendChild(row);
+  }
+</script>
+
+</body>
+</html>
