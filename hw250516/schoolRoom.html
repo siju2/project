@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  <meta charset="UTF-8">
+  <title>자리 배치도</title>
+  <link rel="stylesheet" href="./schoolRoom.css">
+</head>
+<body>
+  <h1>자리 배치도</h1>
+
+  <script>
+    const totalSeats = 34;
+    const seatsPerRow = 6;
+
+    document.write('<table class="seat-table">');
+
+    for (let i = 0; i < Math.ceil(totalSeats / seatsPerRow); i++) {
+      document.write('<tr>');
+
+      for (let j = 0; j < seatsPerRow; j++) {
+        const seatNum = i * seatsPerRow + j + 1;
+
+        if (seatNum <= totalSeats) {
+          document.write(`<td>좌석 ${seatNum}</td>`);
+        } else {
+          document.write('<td></td>');
+        }
+      }
+
+      document.write('</tr>');
+    }
+
+    document.write('</table>');
+  </script>
+</body>
+</html>
